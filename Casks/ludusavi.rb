@@ -1,6 +1,6 @@
 cask "ludusavi" do
-  version "0.12.1"
-  sha256 "753abf300a17b516eff70254cf77ab89cc4485df26d2d5af9aa9bdfb7e72a45d"
+  version "0.15.0"
+  sha256 "8671d484aad15989b95a1cc983499f66aec3529e4f09aaa9dbbe1b9f3ea071f7"
 
   url "https://github.com/mtkennerly/ludusavi/releases/download/v#{version}/ludusavi-v#{version}-mac.zip"
   name "ludusavi"
