@@ -1,6 +1,6 @@
 cask "ludusavi" do
-  version "0.21.0"
-  sha256 "c7c3075074ca24152f59786f4f4e9ee86270edce76ea5124f01dc2f11148bb68"
+  version "0.24.1"
+  sha256 "842159a895740efc13192cecef822ecaa536d245b0457a5771de92cbbce4db94"
 
   url "https://github.com/mtkennerly/ludusavi/releases/download/v#{version}/ludusavi-v#{version}-mac.zip"
   name "ludusavi"
@@ -14,7 +14,5 @@ cask "ludusavi" do
 
   binary "ludusavi"
 
-  zap trash: [
-    "~/.config/ludusavi",
-  ]
+  zap trash: "~/.config/ludusavi"
 end
