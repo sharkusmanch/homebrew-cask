@@ -1,0 +1,22 @@
+---
+name: "Update Casks"
+
+on:
+  workflow_dispatch:
+
+# on:
+#   schedule:
+#     - cron:  '30 5,17 * * *'
+
+jobs:
+  test_schedule:
+    runs-on: macos-latest
+    steps:
+    - name: Update Homebrew cask
+      uses: macauley/action-homebrew-bump-cask@v1
+      with:
+        token: ${{secrets.TOKEN}}
+        tap: sharkusmanch/homebrew-cask
+        # Bump only these casks if outdated
+        # cask: lime3ds, ludusavi
+        livecheck: true
