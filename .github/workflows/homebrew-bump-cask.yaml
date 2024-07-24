@@ -2,8 +2,9 @@
 name: "Update Casks"
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron:  '30 5,17 * * *'
+    - cron: '20 */4 * * *'
 
 jobs:
   homebrew-bump-cask:
