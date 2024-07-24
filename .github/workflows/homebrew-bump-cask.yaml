@@ -9,7 +9,7 @@ on:
 #     - cron:  '30 5,17 * * *'
 
 jobs:
-  test_schedule:
+  homebrew-bump-cask:
     runs-on: macos-latest
     steps:
     - name: Update Homebrew cask
@@ -20,3 +20,14 @@ jobs:
         # Bump only these casks if outdated
         # cask: lime3ds, ludusavi
         livecheck: true
+
+  automerge:
+    name: Enable automerge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable automerge
+        uses: daneden/enable-automerge-action@v1
+        with:
+          github-token: ${{secrets.TOKEN}}
+          allowed-author: "sharkusmanch"
+          merge-method: MERGE
