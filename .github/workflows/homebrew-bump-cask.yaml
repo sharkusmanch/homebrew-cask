@@ -2,11 +2,8 @@
 name: "Update Casks"
 
 on:
-  workflow_dispatch:
-
-# on:
-#   schedule:
-#     - cron:  '30 5,17 * * *'
+  schedule:
+    - cron:  '30 5,17 * * *'
 
 jobs:
   homebrew-bump-cask:
@@ -17,8 +14,6 @@ jobs:
       with:
         token: ${{secrets.TOKEN}}
         tap: sharkusmanch/homebrew-cask
-        # Bump only these casks if outdated
-        # cask: lime3ds, ludusavi
         livecheck: true
 
     - name: Enable automerge
