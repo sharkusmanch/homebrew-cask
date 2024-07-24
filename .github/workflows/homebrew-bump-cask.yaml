@@ -21,13 +21,9 @@ jobs:
         # cask: lime3ds, ludusavi
         livecheck: true
 
-  automerge:
-    name: Enable automerge
-    runs-on: ubuntu-latest
-    steps:
-      - name: Enable automerge
-        uses: daneden/enable-automerge-action@v1
-        with:
-          github-token: ${{secrets.TOKEN}}
-          allowed-author: "sharkusmanch"
-          merge-method: MERGE
+    - name: Enable automerge
+      uses: daneden/enable-automerge-action@v1
+      with:
+        github-token: ${{secrets.TOKEN}}
+        allowed-author: "sharkusmanch"
+        merge-method: MERGE
