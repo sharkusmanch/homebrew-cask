@@ -1,0 +1,17 @@
+---
+name: "Update Casks"
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  homebrew-bump-cask:
+    runs-on: macos-latest
+    steps:
+    - name: Enable automerge
+      uses: daneden/enable-automerge-action@v1
+      with:
+        github-token: ${{secrets.TOKEN}}
+        allowed-author: "sharkusmanch"
+        merge-method: MERGE

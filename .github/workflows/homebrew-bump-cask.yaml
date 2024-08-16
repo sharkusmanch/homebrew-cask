@@ -16,10 +16,3 @@ jobs:
         token: ${{secrets.TOKEN}}
         tap: sharkusmanch/homebrew-cask
         livecheck: true
-
-    - name: Enable automerge
-      uses: daneden/enable-automerge-action@v1
-      with:
-        github-token: ${{secrets.TOKEN}}
-        allowed-author: "sharkusmanch"
-        merge-method: MERGE
