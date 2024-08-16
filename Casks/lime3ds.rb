@@ -4,12 +4,12 @@ cask "lime3ds" do
 
   url "https://github.com/Lime3DS/Lime3DS/releases/download/#{version}/lime3ds-#{version}-macos-universal.tar.gz"
   name "lime3ds"
-  desc " A Nintendo 3DS emulator based on Citra"
+  desc "A Nintendo 3DS emulator based on Citra"
   homepage "https://github.com/Lime3DS/Lime3DS"
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^?(\d+)$/i)
   end
 
   zap trash: [
