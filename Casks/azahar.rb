@@ -12,7 +12,7 @@ cask "azahar" do
     regex(/^?(\d+)$/i)
   end
 
-  app "azahar-#{version}-macos-universal/lime3ds-gui.app", target: "Azahar.app"
+  app "azahar-#{version}-macos-universal/Azahar.app", target: "Azahar.app"
 
   zap trash: "~/Library/Application Support/Azahar"
 end
